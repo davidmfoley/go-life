@@ -20,19 +20,19 @@ func TestNeighbors(t *testing.T) {
 }
 
 func TestOscillator(t *testing.T) {
-	var starting = Cells{
+	var vertical = Cells{
 		Cell{0, 0},
 		Cell{0, 1},
 		Cell{0, 2},
 	}
-	var expected = Cells{
+	var horizontal = Cells{
 		Cell{1, 1},
 		Cell{-1, 1},
 		Cell{0, 1},
 	}
 
-	CheckEvolution(t, starting, expected)
-	CheckEvolution(t, expected, starting)
+	CheckEvolution(t, vertical, horizontal)
+	CheckEvolution(t, horizontal, vertical)
 }
 
 func TestBox(t *testing.T) {
